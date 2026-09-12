@@ -1,0 +1,53 @@
+name: kisan_sahayak
+description: KisanSahayak — Agritech AI Diagnostic & Community Advisory System. Offline-first crop disease detection with Edge ML, multilingual TTS, and GSM SMS dispatch.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Camera / image capture
+  image_picker: ^1.1.2
+
+  # Text-to-speech (multilingual regional audio)
+  flutter_tts: ^4.2.0
+
+  # Native SMS dispatch (GSM low-bandwidth)
+  another_telephony: 0.4.1
+
+  # GPS location
+  geolocator: ^13.0.2
+
+  # Reverse geocoding (coordinates -> state name)
+  geocoding: ^3.0.0
+
+  # Runtime permission requests
+  permission_handler: ^11.4.0
+
+  # On-device TFLite inference
+  tflite_flutter: ^0.11.0
+
+  # Image decoding & preprocessing
+  image: ^4.2.0
+
+  # Google Fonts for premium typography
+  google_fonts: ^6.2.1
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/crop_model.tflite
+    - assets/labels.txt
+    - assets/logo.png
